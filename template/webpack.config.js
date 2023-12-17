@@ -36,10 +36,6 @@ module.exports = {
               modules: {
                 localIdentName: '[local]__[hash:base64:5]', // 指定类名格式
               },
-            },
-            options: {
-              modules: true,
-              localIdentName: '[local]_[hash:base64:5]'
             }
           },
           'postcss-loader', "less-loader",
@@ -47,6 +43,12 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    alias: {
+        '@': path.resolve(__dirname, 'src'),
+    },
+},
   plugins: [
     new HtmlWebpackPlugin({
       template: 'public/index.html'

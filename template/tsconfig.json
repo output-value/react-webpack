@@ -3,15 +3,22 @@
     "target": "es5",
     "module": "esnext",
     "jsx": "react-jsx",
-    "strict": true,
+    "strict": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "moduleResolution": "Node",
+    "baseUrl": "./",
     "lib": [
-      "DOM",
-      "ES6"
+      "dom",
+      "dom.iterable",
+      "esnext"
     ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
   },
   "include": [
     "src",
